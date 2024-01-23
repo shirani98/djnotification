@@ -1,0 +1,389 @@
+{
+	"info": {
+		"_postman_id": "c4d19391-47a0-4bb4-a9d2-5eb39be7f549",
+		"name": "Notification",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19264730"
+	},
+	"item": [
+		{
+			"name": "Get Notifications",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/notification/?id=2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"notification",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Card Notification",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-BX-APIKEY",
+						"value": "s8v0qxITC6yIhsAqzd5NebWEPBSJAfZfhAhJlwHUMtwm54jSRv4N2aaL1PYB2wpscBHtkxuZdbGVqtf2wHllw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "group",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "message_layout",
+							"value": "card",
+							"type": "text"
+						},
+						{
+							"key": "background_color",
+							"value": "#000",
+							"type": "text"
+						},
+						{
+							"key": "text_color",
+							"value": "#000",
+							"type": "text"
+						},
+						{
+							"key": "message_title",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "portrait_image",
+							"value": "http://google.com",
+							"type": "text"
+						},
+						{
+							"key": "landscape_image",
+							"value": "http://google.com",
+							"type": "text"
+						},
+						{
+							"key": "button_text",
+							"value": "click me",
+							"type": "text"
+						},
+						{
+							"key": "button_text_color",
+							"value": "#000",
+							"type": "text"
+						},
+						{
+							"key": "extra_data",
+							"value": "{\"test\":\"test\"}",
+							"type": "text"
+						},
+						{
+							"key": "time_to_send",
+							"value": "1705227981",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/notification/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"notification",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Modal Notification",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-BX-APIKEY",
+						"value": "s8v0qxITC6yIhsAqzd5NebWEPBSJAfZfhAhJlwHUMtwm54jSRv4N2aaL1PYB2wpscBHtkxuZdbGVqtf2wHllw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "group",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "message_layout",
+							"value": "modal",
+							"type": "text"
+						},
+						{
+							"key": "background_color",
+							"value": "#000",
+							"type": "text"
+						},
+						{
+							"key": "text_color",
+							"value": "#000",
+							"type": "text"
+						},
+						{
+							"key": "message_title",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"value": "http://google.com",
+							"type": "text"
+						},
+						{
+							"key": "button_text",
+							"value": "click me",
+							"type": "text"
+						},
+						{
+							"key": "extra_data",
+							"value": "{\"test\":\"test\"}",
+							"type": "text"
+						},
+						{
+							"key": "time_to_send",
+							"value": "1705227981",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/notification/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"notification",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Image Only Notification",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-BX-APIKEY",
+						"value": "s8v0qxITC6yIhsAqzd5NebWEPBSJAfZfhAhJlwHUMtwm54jSRv4N2aaL1PYB2wpscBHtkxuZdbGVqtf2wHllw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "group",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "message_layout",
+							"value": "image_only",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"value": "http://google.com",
+							"type": "text"
+						},
+						{
+							"key": "action",
+							"value": "http://google.com",
+							"type": "text"
+						},
+						{
+							"key": "time_to_send",
+							"value": "1705227981",
+							"type": "text"
+						},
+						{
+							"key": "extra_data",
+							"value": "{\"test\":\"test\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/notification/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"notification",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Top Banner Notification",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-BX-APIKEY",
+						"value": "s8v0qxITC6yIhsAqzd5NebWEPBSJAfZfhAhJlwHUMtwm54jSRv4N2aaL1PYB2wpscBHtkxuZdbGVqtf2wHllw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "group",
+							"value": "test",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "message_layout",
+							"value": "top_banner",
+							"type": "text"
+						},
+						{
+							"key": "background_color",
+							"value": "#000",
+							"type": "text"
+						},
+						{
+							"key": "text_color",
+							"value": "#000",
+							"type": "text"
+						},
+						{
+							"key": "message_title",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"value": "http://google.com",
+							"type": "text"
+						},
+						{
+							"key": "action",
+							"value": "http://google.com",
+							"type": "text"
+						},
+						{
+							"key": "extra_data",
+							"value": "{\"test\":\"test\"}",
+							"type": "text"
+						},
+						{
+							"key": "time_to_send",
+							"value": "1705227981",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/notification/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"notification",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
